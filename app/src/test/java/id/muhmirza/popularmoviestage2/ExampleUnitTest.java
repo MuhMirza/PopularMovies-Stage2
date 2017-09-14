@@ -1,4 +1,4 @@
-package id.muhmirza.dev.popularmoviestage2;
+package id.muhmirza.popularmoviestage2;
 
 import org.junit.Test;
 
