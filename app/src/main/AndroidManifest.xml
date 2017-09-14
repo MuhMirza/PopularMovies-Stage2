@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="id.muhmirza.popularmoviestage2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="id.muhmirza.popularmoviestage2.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_movies"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="id.muhmirza.popularmoviestage2.view.presentation.splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="id.muhmirza.popularmoviestage2.view.presentation.main.MainActivity" />
+        <activity
+            android:name="id.muhmirza.popularmoviestage2.view.presentation.detail.DetailActivity"
+            android:parentActivityName="id.muhmirza.popularmoviestage2.view.presentation.main.MainActivity" />
+
+        <provider
+            android:name="id.muhmirza.popularmoviestage2.data.util.db.MovieContentProvider"
+            android:authorities="id.muhmirza.popularmoviestage2"
+            android:exported="false" />
+    </application>
+
+</manifest>
